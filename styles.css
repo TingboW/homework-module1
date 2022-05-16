@@ -39,7 +39,7 @@
     display: inline-block;
     float: left;
     padding-left: 25px;
-    border-left: 1px solid rgba (202, 204, 202, 0.6);
+    border-left: 1px solid rgb(202, 204, 202, 0.6);
     line-height: 100px;
     text-transform:uppercase;
     font-size: 14px;
@@ -174,5 +174,75 @@ th:first-child{
 }
 td:first-child{
     font-weight: bold;
-    backgorund: #BDE1FF;
+    background: #BDE1FF;
+}
+
+/* Contact */
+
+fieldset {
+    border:1px solid #9ed034;
+    padding-left: 2em;
+  }
+
+  .textbox label {
+      display:block;
+  }
+.commentbox label {
+    display: block;
+}
+form.button{
+    color: #4977D1;
+}
+
+label {
+    display:inline;
+    font-weight: bold;
+}
+
+span:first-child{
+    font-weight:bold;
+}
+input {
+    width: 500px;
+    border-color: rgb(43, 41, 41);
+    margin-bottom: 10px;
+}
+
+input[name="contact"] { /* attribute selector */
+    width: 15px;
+}
+
+input[type="radios"]{
+        margin-bottom: 15px;
+}
+select{
+    border-color: rgb(43, 41, 41);
+    width: 100px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+textarea {
+    width:500px;
+    height: 100px;
+}
+
+input[type="submit"]{
+    display:inline;
+    margin:20px 0 10px 0;
+    width:100px;
+    background-color: #4977D1;
+    color:#fff;
+    font-weight:bold;
+    margin-left: 400px;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+}
+
+legend {
+    color:#4977D1;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
 }
