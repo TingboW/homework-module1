@@ -16,6 +16,10 @@
     background: no-repeat lightgrey url(images/cliff_rock.jpeg);
     background-size: 1500px;
 }
+
+#cliffs header{
+    background: no-repeat lightgrey url(images/forest_cliff.jpeg);
+}
 .main-header{
     background-color:rgb(255,255,255,0.8);
     width: 700px;
@@ -73,6 +77,7 @@ h2{
 section {
     width: 100%;
     background-color: #4288C3;
+    margin-top: 50px;
 }
 section #partners {
     width: 1200px;
@@ -245,4 +250,23 @@ legend {
     font-weight: bold;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+}
+
+/* Cliffs Style */
+
+figure .cliffs {
+    display: inline-block;
+    margin: 0 0 0.2em;
+    padding: 1em 1em;
+    background-color: #fff;
+    border-radius: 60%;
+}
+
+figcaption {
+    background-color: rgb(141, 20, 20);
+    height:30px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 15px;
 }
