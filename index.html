@@ -109,8 +109,31 @@
         } else {
             ampm = "AM"; //set to AM
         }
+
+        var utchr = d.getUTCHours(); //Get current Greenwich Mean Time (GMT)
+        var timeDiff = utchr - hr; //To store time difference between GMT hour and Local Hour
+        var adjTimeDiff; //To store time difference converted to positive number
+        var timeZone; //To store the 4 time zones (PF, MT, CT, ET)
+
+        if (timeDiff < 0) {
+            adjTimeDiff = Math.abs(timeDiff);
+        } else {
+            adjTimeDiff = timeDiff;
+        }
+        //Determine Time Zone
+        var timeZone;
+        if (adjTimeDiff == 4) {
+            timeZone = "ET";
+        } else if (adjTimeDiff == 5) {
+            timeZone = "CT";
+        } else if (adjTimeDiff == 6) {
+            timeZone = "MT";
+        } else if (adjTimeDiff == 7) {
+            timeZone = "PT";
+        }
+
         //Assemble time format to display 
-        var time = hr + ":" + min + ":" + sec + " " + ampm;
+        var time = hr + ":" + min + ":" + sec + " " + ampm + " " + timeZone;
         //Display current local time and time zone on HTML elements
         document.getElementById("clock").innerText = time; //adding time
 
@@ -119,7 +142,7 @@
         //Initial run of time data function
     }
         currentTime();
-        
+
 </script>
 </body>
 </html>
