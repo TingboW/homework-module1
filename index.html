@@ -92,7 +92,7 @@
         var min = d.getMinutes(); //get current minuts
         var sec = d.getSeconds(); //get current seconds
         var ampm; // declare empty variable to store AM or PM
-        //Add 0 to signle digits for seconds
+        //Add 0 to single digits for seconds
         if (sec <10) {
             sec = "0" + sec;
         }
@@ -100,7 +100,6 @@
         if (min <10) {
             min = "0" + min;
         }
-    }
         //Determine AM or PM string
         if (hr == 12) {
             ampm = "PM"; //Set to PM
@@ -110,7 +109,17 @@
         } else {
             ampm = "AM"; //set to AM
         }
-  
+        //Assemble time format to display 
+        var time = hr + ":" + min + ":" + sec + " " + ampm;
+        //Display current local time and time zone on HTML elements
+        document.getElementById("clock").innerText = time; //adding time
+
+        //Run time data function every 1 second
+        setInterval (currentTime, 1000); //settign timer 
+        //Initial run of time data function
+    }
+        currentTime();
+        
 </script>
 </body>
 </html>
