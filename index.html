@@ -28,6 +28,10 @@
                 </ul>
             </nav>
         </header>
+        <section id="timeofday">
+            <span>Your Current Local Time: </span>
+            <span id="clock"></span>
+        </section>
         <!--Main content area-->
         <main>
             <h2>Introducing California's Greatest Cliffs</h2>
@@ -77,5 +81,36 @@
             </div>
 
         </footer>
+
+<!--JavaScript Codes-->
+<script>
+    //Create a time data function
+    function currentTime() {
+        //Declare variables
+        var d = new Date(); //get current date
+        var hr = d.getHours(); //get current hours
+        var min = d.getMinutes(); //get current minuts
+        var sec = d.getSeconds(); //get current seconds
+        var ampm; // declare empty variable to store AM or PM
+        //Add 0 to signle digits for seconds
+        if (sec <10) {
+            sec = "0" + sec;
+        }
+        //Add 0 to single digits for minuts
+        if (min <10) {
+            min = "0" + min;
+        }
+    }
+        //Determine AM or PM string
+        if (hr == 12) {
+            ampm = "PM"; //Set to PM
+        } else if (hr > 12) {
+            hr -= 12; //deduct 12 from hours greater than 12 (military time)
+            ampm = "PM"; //set to PM
+        } else {
+            ampm = "AM"; //set to AM
+        }
+  
+</script>
 </body>
 </html>
