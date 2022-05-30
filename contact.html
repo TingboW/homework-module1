@@ -9,7 +9,7 @@
      <!--Link external CSS-->
  <link rel="stylesheet" href="styles.css">
 </head>
-<body id="contact">
+<body id="contact" onload="disableButton(true)">
     <div id="container">
         <header>
             <div class="main-header">
@@ -79,12 +79,12 @@
                 </div>
                 <!--Random Codes-->
                 <div class = "randomcode">
-                    <input type="text" name="randomcode" placeholder="Enter characters">
+                    <input type="text" name="randomcode" placeholder="Enter characters" id="codeentered" >
                     <p id="codes"></p>
                 </div>
             
                 <div class="button">
-                    <input type="submit" value="Inquire">
+                    <input type="submit" id="submit" value="Inquire">
                 </div> 
             </fieldset>  
             </form>
@@ -133,5 +133,7 @@
     <!--Partners Codes-->
 <script src="js/site_scripts.js"></script>
 <script src="js/randomcodes.js"></script>
+
+
 </body>
 </html>
