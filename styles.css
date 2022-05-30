@@ -289,3 +289,22 @@ figcaption {
     background: linear-gradient(0deg, rgba(251,215,139,1) 0%, rgba(118,213,245,1) 100%);
     text-align: center;
 }
+
+/* Random Code Styles */
+.randomcode {
+    display: inline-flex;
+    margin-left: 250px;
+}
+
+.randomcode input {
+    margin-top: 10px;
+    width: 130px;
+    height: 20px;
+}
+
+.randomcode p{
+    background-color: grey;
+    text-align: center;
+    padding: 10px;
+    margin-left: 15px;
+}
