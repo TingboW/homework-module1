@@ -207,6 +207,7 @@ label {
 span:first-child{
     font-weight:bold;
 }
+
 input {
     width: 500px;
     border-color: rgb(43, 41, 41);
@@ -236,7 +237,7 @@ input[type="submit"]{
     display:inline;
     margin:20px 0 10px 0;
     width:100px;
-    background-color: #4977D1;
+    /*background-color: #4977D1; */
     color:#fff;
     font-weight:bold;
     margin-left: 400px;
@@ -250,6 +251,16 @@ legend {
     font-weight: bold;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+}
+
+form .button input{
+    width: 8em;
+    height: 2.5em;
+    font-size:1.2em;
+    font-weight: bold;
+    /*background-color: #4977D1; */
+    color: #ffffff;
+    border: none;
 }
 
 /* Cliffs Style */
