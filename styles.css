@@ -310,3 +310,12 @@ figcaption {
     padding: 10px;
     margin-left: 15px;
 }
+
+.highlight {
+    color: white;
+    background: #9ed034;
+}
+
+#selectable:hover {
+    cursor: pointer;
+}
