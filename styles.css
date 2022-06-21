@@ -1,8 +1,8 @@
     /* Header */
  header {
     width: 100%;
-    min-height: 275px;
-    height: auto;
+    min-height: 400px;
+    height:auto;
 }
 #home header {
     background: no-repeat white url(images/cliff_ocean.jpg);

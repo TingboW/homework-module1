@@ -26,7 +26,7 @@
 
 <header>
 <body id="activities">
-    <nav class="main-header navbar navbar-expand-lg navbar-dark sticky-top position: absolute">
+    <nav class="main-header navbar navbar-expand-lg navbar-dark sticky-top">
         <a class="navbar-brand"
            href="#">
             <div class="logo">
@@ -89,6 +89,8 @@
             </p>
 
                         <!-- Create a Table-->
+            <div class="container-fluid">
+                <div style="overflow-x:auto;">
                         <table>
                             <caption>Activities at the Cliffs</caption>
                             <thead>
@@ -139,7 +141,43 @@
                         
                             <tbody>            
                         </table>
-                        <div id="displaySelected">
+                    </div>
+                </div>
+            </div>
+            
+                    <div class="container">
+                        <!-- Button to Open the Modal -->
+                        <button type="button" class="btn btn-danger mt-5" data-toggle="modal" data-target="#displayModal" hidden>
+                            launch bootstrap modal </button>
+            
+                        <!-- The Modal -->
+                        <div class="modal fade" id="displayModal" tabindex="-1" role="dialog" aria-hidden="static">
+                        <div class="modal-dialog modal-dialog-centered" id="myModal" role="document">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                            
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                <h4 class="modal-title">My selected activities to enquire:</h4>
+                                <button type="button" class="close" data-dismiss="modal" onclick="unselect()"><span aria-hidden="">&times;</span></button>
+                                </div>
+                                
+                                <!-- Modal body -->
+                                <div class="modal-body m-3" id="result">
+                                </div>
+                                
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                  <!--  <p style="margin-right:300px;"></p>-->
+                                    <button type="button" class="btn btn-success" data-dismiss="modal" onclick="unselect()">Back to Activities</button>
+                                    <button type="button" class="btn btn-primary">Get info</button>
+                                </div>
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+
+            <!-- <div id="displaySelected">
                             <div id="result">
                                 <h4> My selected activities to enquire: </h4>
                             </div>
@@ -147,7 +185,7 @@
                                 <input type="email" placeholder="johndoe@gmail.com">
                                 <button>Get Info</button>
                                 </div>
-                            </div>
+                            </div> -->
                     </main>
                         <section>
                             <ul id="partners">

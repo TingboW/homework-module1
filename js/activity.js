@@ -1,13 +1,19 @@
-$(document).ready(function(){
-    $("td").click(function (){
-        var content = $(this).text();
+$(document).ready(function () {
+    $("table tr").each(function () {
+        $(this).find("td:not(:first)").attr('id', 'selectable');
+        $(this).find('td:contains("Not")').attr('id', 'notSelectable');
+    })
 
-        if (content != "Not Available"){
-            $(this).toggleClass("highlight");
+    $("td[id='selectable']").click(function () {
+        $(this).toggleClass("highlight");
 
-            if($(this).hasClass("highlight")) {
-                $('#displaySelected').css("visibility","visible");
-                $('#displaySelected').css("margin-top","2em");
+        if ($(this).hasClass("highlight")) {
+            $('#displayModal').modal('show');
+
+            
+          //  if($(this).hasClass("highlight")) {
+           //     $('#displayModal').css("visibility","visible");
+              //  $('#displaySelected').css("margin-top","2em");
                 var location;
                 if ($(this).index("td")%5 == 1){
                     location = "West Cliff";
@@ -20,16 +26,22 @@ $(document).ready(function(){
                     location = "South Cliff";
                 }
 
-                $('#result').append("<p>" + content + " at " + location + "</p>");
+                $('#result').append("<p>" + $(this).text()  + " at " + location + "</p>");
 
             } else {
-                $('#result p:contains('+content+')').remove();
+                $('#result p:contains('+$(this).text() +')').remove();
             
                 if ($('#result').has('p').length == false){
-                    $('#displaySelected').css("visibility", "hidden");
-                    $('#displaySelected').css("margin-top","0");
+                    $('#displayModal').modal('hide');
+                 //   $('#displayModal').css("visibility", "hidden");
+                 //   $('#displaySelected').css("margin-top","0");
                 }
             }
-        }
     });
 });
+
+
+function unselect() {
+    $("td[id='selectable']").removeClass("highlight");
+    $("#result").empty();
+}
